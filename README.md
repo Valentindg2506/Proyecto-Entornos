@@ -29,12 +29,12 @@
 
 ## ✒️ Autores
 
-<a href="https://github.com/Pon-Aqui-El-Usuario-De-Valentin" target="_blank">
+<a href="https://github.com/Valentindg2506" target="_blank">
   <img src="https://www.svgrepo.com/show/475654/github-color.svg" alt="GitHub" width="20" style="vertical-align:middle; margin-right:5px;">
   <b>Valentin De Gennaro</b>
 </a> - Estudiante de Desarrollo de Aplicaciones Multiplataforma (DAM).
 <br>
-<a href="https://github.com/Pon-Aqui-El-Usuario-De-Daniel" target="_blank">
+<a href="https://github.com/ElOrange12" target="_blank">
    <img src="https://www.svgrepo.com/show/475654/github-color.svg" alt="GitHub" width="20" style="vertical-align:middle; margin-right:5px;">
   <b>Daniel Oliveira</b>
 </a> - Estudiante de Desarrollo de Aplicaciones Multiplataforma (DAM).
