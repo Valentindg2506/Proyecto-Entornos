@@ -21,7 +21,7 @@
 	<title>AdminViews</title>
 </head>
 
-<body>
+<body class="login-page">
 	<div class="container" id="container">
 		
 		<div class="form-container sign-up-container">

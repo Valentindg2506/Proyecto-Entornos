@@ -5,35 +5,25 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: sans-serif; /* Tu fuente preferida */
+    font-family: sans-serif;
     
-    /* --- ESTO ES LO QUE HACE LA MAGIA --- */
     display: flex;
-    flex-direction: column; /* Coloca los elementos uno debajo de otro */
-    min-height: 100vh;      /* Obliga al body a medir AL MENOS el 100% de la altura de la pantalla */
+    flex-direction: column;
+    min-height: 100vh;
 }
 
 /* --- ESTILOS DE LA CABECERA --- */
 header {
-    /* FONDO DEGRADADO (Igual que antes) */
     background: linear-gradient(to right, rgb(255, 69, 0), rgb(255, 127, 80));
-
-    /* TAMAÑO Y ESPACIADO (CAMBIOS AQUÍ) */
-    /* Quitamos el min-height fijo y dejamos que el contenido dicte la altura */
     width: 100%;
-    
-    /* Padding reducido: 10px arriba/abajo, 5px a los lados (casi pegado) */
-    padding: 10px 10px; 
-    
+    padding: 10px 15px;
     box-sizing: border-box;
 
-    /* Flexbox */
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
 
-    /* Color y Decoración */
     color: #FFFFFF; 
     box-shadow: 0 4px 10px rgba(0,0,0,0.5);
     border-bottom: 1px solid rgba(0,0,0,0.9);
@@ -41,28 +31,23 @@ header {
 
 /* --- ESTILOS DEL LOGO ADMINVIEWS --- */
 .logo-admin {
-    /* Aumentamos un poco el ancho permitido para que se lea bien */
     max-width: 150px; 
-    /* Limitamos la altura para que no deforme la cabecera */
     max-height: 50px; 
-    
     background-color: #FFFFFF;
-    
-    /* Reduje un poco el padding interno del logo para ganar espacio */
     padding: 5px 8px; 
-    
-    border-radius: 8px; /* Radio un poco más sutil */
+    border-radius: 8px; 
     box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    flex-shrink: 0; 
 }
 
 /* --- ESTILOS DEL BOTÓN DE VOLVER --- */
 .btn-inicio {
     display: block;
-    /* Ajustado a 45px (un poco más pequeño que 50, pero aún fácil de clicar) */
     width: 45px; 
     height: 45px;
     transition: transform 0.3s ease;
     z-index: 10;
+    flex-shrink: 0;
 }
 
 .btn-inicio img {
@@ -79,43 +64,42 @@ header {
 /* //////////////////////////////////////////////////////////////////// MAIN //////////////////////////////////////////////////////////////////// */
 
 main {
-    /* El 1 hace que este elemento ocupe todo el espacio libre disponible */
     flex: 1; 
-    
-    /* Tu padding o estilos opcionales */
     width: 100%;
 }
 
-/* Contenedor principal para centrar las tarjetas */
+/* Contenedor principal de las tarjetas */
 .cards-container {
     display: flex;
-    justify-content: center; /* Centradas horizontalmente */
-    gap: 50px; /* Separación entre las tarjetas */
+    justify-content: center;
+    gap: 50px;
     padding: 50px 20px;
-    flex-wrap: wrap; /* Para que baje una debajo de otra en móvil */
+    flex-wrap: wrap; 
 }
 
 /* Estilo base de la tarjeta */
 .card {
-    width: 350px; /* Ancho similar a la imagen */
+    width: 100%;       
+    max-width: 350px;
+    
     background-color: white;
-    border: 1px solid #000; /* Borde negro fino como en la imagen */
-    border-radius: 20px;    /* Bordes muy redondeados */
-    overflow: hidden;       /* Para que el color de fondo no se salga de las esquinas */
+    border: 1px solid #000;
+    border-radius: 20px;    
+    overflow: hidden;       
     display: flex;
     flex-direction: column;
     box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    
+    margin: 0 auto; 
 }
 
 /* --- PARTE SUPERIOR (NARANJA) --- */
 .card-header {
-    /* Mismo degradado que tu cabecera */
     background: linear-gradient(to right, rgb(255, 69, 0), rgb(255, 127, 80));
     padding: 30px 20px;
     text-align: center;
     color: white;
     
-    /* Flex para centrar icono y texto */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -124,10 +108,10 @@ main {
 }
 
 .card-icon {
-    width: 200px;  /* Tamaño del icono grande (TV/Cine) */
+    width: 150px;
     height: auto;
     object-fit: contain;
-    filter: brightness(0) invert(1); /* Vuelve el icono blanco si tu imagen es negra */
+    filter: brightness(0) invert(1);
 }
 
 .card-header h3 {
@@ -140,7 +124,7 @@ main {
 .card-body {
     padding: 25px;
     text-align: center;
-    flex-grow: 1; /* Hace que ocupen el mismo alto si el texto varía */
+    flex-grow: 1; 
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -157,21 +141,18 @@ main {
 /* --- BOTÓN FLECHA --- */
 .btn-flecha {
     background: linear-gradient(to right, rgb(255, 69, 0), rgb(255, 127, 80));
-    padding: 10px 40px; /* Botón ancho */
+    padding: 10px 40px; 
     border-radius: 10px;
     display: inline-block;
-    
-    /* Para alinear el botón a la derecha como en la imagen: */
     align-self: flex-end; 
-    
     transition: transform 0.2s ease;
 }
 
 .btn-flecha img {
-    width: 30px; /* Tamaño de la flecha */
+    width: 30px; 
     height: auto;
     display: block;
-    filter: brightness(0) invert(1); /* Asegura que la flecha se vea blanca */
+    filter: brightness(0) invert(1); 
 }
 
 .btn-flecha:hover {
@@ -182,11 +163,11 @@ main {
 /* //////////////////////////////////////////////////////////////////// FOOTER //////////////////////////////////////////////////////////////////// */
 
 footer {
-    background-color: #1a1a1a;       /* Fondo oscuro */
-    color: #ffffff;                  /* Texto blanco */
-    border-top: 4px solid rgb(255, 69, 0); /* Línea naranja superior */
-    text-align: center;              /* Texto centrado */
-    padding: 20px 0;                 /* Espacio arriba y abajo */
+    background-color: #1a1a1a;       
+    color: #ffffff;                  
+    border-top: 4px solid rgb(255, 69, 0); 
+    text-align: center;              
+    padding: 20px 10px;             
     width: 100%;
 }
 
@@ -195,4 +176,3 @@ footer p {
     font-size: 0.9rem;
     letter-spacing: 0.5px;
 }
-
