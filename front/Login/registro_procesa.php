@@ -1,9 +1,9 @@
 <?php
 	// Primero cogemos la info que viene del formulario
-	$nombrecompleto = $_POST['nombrecompleto'];
+	$nombre = $_POST['nombrecompleto'];
 	$usuario = $_POST['usuario'];
 	$contrasena = ($_POST['contrasena']);
-	$email = $_POST['email'];
+	$correo = $_POST['email'];
 	// Y luego metemos esa información en la base de datos
 
 	$host = "localhost";
@@ -15,11 +15,11 @@
 
 	// Metemos los datos en la base de datos
 	$sql = "
-		INSERT INTO usuario (usuario, contrasena, nombrecompleto, email) VALUES (
+		INSERT INTO usuario (usuario, contrasena, nombre, correo) VALUES (
 		'".$usuario."',
 		'".$contrasena."',
-		'".$nombrecompleto."',
-		'".$email."'
+		'".$nombre."',
+		'".$correo."'
 		);
 	";
 	$conexion->query($sql);
