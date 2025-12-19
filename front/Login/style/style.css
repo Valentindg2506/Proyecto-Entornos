@@ -338,160 +338,126 @@ form h1 {
 /* =========================================
    VERSIÓN MÓVIL: DESLIZAMIENTO VERTICAL
    ========================================= */
+
 @media (max-width: 768px) {
 
-    /* 1. Contenedor: Ajustamos altura y quitamos desbordamiento */
+    /* 1. Reset del Contenedor Principal */
     .container {
         width: 100%;
-        min-height: 700px; /* Altura mínima para que quepa todo */
-        height: 100vh;
-        overflow: hidden; /* Importante para que lo que salga de la caja no se vea */
-        box-shadow: none;
+        min-height: 100vh;
+        height: auto;
         border-radius: 0;
+        box-shadow: none;
+        overflow-x: hidden; /* Evita scroll horizontal */
+        position: relative;
     }
 
-    /* 2. Formularios: Ocupan el 65% superior de la pantalla */
+    /* 2. Configuración General de Formularios */
     .form-container {
         width: 100%;
-        height: 65%; /* Ocupa la parte de arriba */
+        height: 70%; /* Ocupan el 70% superior */
         top: 0;
         left: 0;
-        padding: 0 30px;
-        transition: transform 0.6s ease-in-out; /* Animación de movimiento */
+        padding: 0 20px; /* Padding reducido para evitar cortes */
     }
 
-    /* 3. Panel Naranja (Overlay): Ocupa el 35% inferior */
-    .overlay-container {
+    /* FIX CRÍTICO: Forzar ancho total y quitar desplazamientos laterales de PC */
+    .sign-in-container, 
+    .sign-up-container {
         width: 100%;
-        height: 35%; /* El trozo de abajo */
-        top: 65%;    /* Empieza donde acaba el formulario (en el 65%) */
         left: 0;
-        right: 0;
-        overflow: hidden;
-        transition: transform 0.6s ease-in-out;
-        z-index: 100;
-        border-radius: 25px 25px 0 0; /* Borde redondeado arriba */
-    }
-
-    /* 4. Fondo del Overlay (El degradado) */
-    .overlay {
-        background: linear-gradient(to right, rgb(255, 69, 0), rgb(255, 127, 80));
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: 0 0;
-        
-        /* Truco para la animación vertical: Hacemos que sea muy alto */
-        position: relative;
-        height: 200%; 
-        width: 100%;
-        top: -100%; /* Lo posicionamos para jugar con el movimiento */
-        transform: translateY(0);
-        transition: transform 0.6s ease-in-out;
-    }
-
-    /* 5. Paneles de texto dentro del Overlay */
-    .overlay-panel {
+        transform: none; /* Anula el translateX(100%) del PC */
         position: absolute;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-direction: column;
-        padding: 0 40px;
-        text-align: center;
-        
-        /* Ahora se apilan verticalmente */
-        width: 100%;
-        height: 50%; /* Cada panel ocupa la mitad del fondo gigante */
-        transform: translateY(0);
-        transition: transform 0.6s ease-in-out;
     }
 
-    /* Panel Izquierdo (Login) -> Ahora será el PANEL SUPERIOR */
-    .overlay-left {
-        top: 0;
-        transform: translateY(-20%); /* Efecto inicial */
-    }
-
-    /* Panel Derecho (Registro) -> Ahora será el PANEL INFERIOR (Visible al inicio) */
-    .overlay-right {
-        bottom: 0;
-        top: auto;
-        right: auto;
-        transform: translateY(0);
-    }
-
-    /* Ajustes de texto para móvil */
-    .overlay-panel h1 {
-        font-size: 1.5rem; /* Un poco más pequeño que en PC */
-    }
+    /* 3. Lógica de VISIBILIDAD (Switcheo Login/Registro) */
     
-    .overlay-panel p {
-        font-size: 0.9rem;
-        margin: 15px 0;
-    }
-    
-    .overlay-panel button {
-        padding: 10px 30px;
-    }
-
-    /* =========================================
-       ANIMACIONES DE ACTIVACIÓN (.right-panel-active)
-       Aquí ocurre la magia del movimiento vertical
-       ========================================= */
-
-    /* 1. Mover el Panel Naranja ARRIBA */
-    .container.right-panel-active .overlay-container {
-        /* Se mueve hacia arriba un 185% de su propia altura (cálculo aproximado para subir al top) */
-        transform: translateY(-185.7%); 
-        /* Explicación matemática: Tiene que subir el 65% de la pantalla. 
-           Como él mide 35%, 65/35 = 1.857 -> 185.7% */
-        border-radius: 0 0 25px 25px; /* Cambiamos los bordes redondeados abajo */
-    }
-
-    /* 2. Mover el Fondo interno (Efecto Parallax) */
-    .container.right-panel-active .overlay {
-        transform: translateY(50%); /* Se desliza para mostrar la otra mitad */
-    }
-
-    /* 3. Mover los Formularios ABAJO */
-    .container.right-panel-active .form-container {
-        /* El formulario baja para ocupar el hueco que dejó el naranja */
-        transform: translateY(53.8%); 
-        /* Explicación: Tiene que bajar el 35% de la pantalla.
-           Como él mide 65%, 35/65 = 0.538 -> 53.8% */
-    }
-
-    /* 4. Gestionar Visibilidad / Z-Index de los formularios */
-    
-    /* LOGIN (Se va abajo y desaparece) */
+    /* Estado por defecto: LOGIN Visible */
     .sign-in-container {
         z-index: 2;
         opacity: 1;
+        pointer-events: all;
     }
-    .container.right-panel-active .sign-in-container {
-        opacity: 0; /* Desvanecer al bajar */
-        z-index: 1;
-    }
-
-    /* REGISTRO (Aparece al bajar) */
+    
+    /* Estado por defecto: REGISTRO Oculto */
     .sign-up-container {
         z-index: 1;
         opacity: 0;
+        pointer-events: none;
     }
+
+    /* CUANDO ESTÁ ACTIVO EL REGISTRO (.right-panel-active) */
+    .container.right-panel-active .sign-in-container {
+        opacity: 0;
+        z-index: 1;
+        pointer-events: none;
+        /* Opcional: Pequeño efecto hacia arriba */
+        transform: translateY(-20px); 
+    }
+
     .container.right-panel-active .sign-up-container {
         opacity: 1;
         z-index: 5;
-        /* IMPORTANTE: Resetear animaciones horizontales que tenía el PC */
-        animation: none; 
-        transform: translateY(53.8%); /* Asegurar que se queda abajo */
-    }
-    
-    /* 5. Paneles de Texto (Ajuste fino de posición) */
-    .container.right-panel-active .overlay-left {
+        pointer-events: all;
         transform: translateY(0);
+        animation: show 0.6s;
+    }
+
+    /* 4. Panel Naranja (Overlay) - SIEMPRE ABAJO */
+    .overlay-container {
+        width: 100%;
+        height: 30%; /* El 30% restante abajo */
+        top: auto;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        /* Quitamos movimientos complejos del contenedor */
+        transform: none !important; 
+        border-radius: 30px 30px 0 0; /* Redondeado solo arriba */
+    }
+
+    /* Fondo degradado deslizante dentro del panel inferior */
+    .overlay {
+        width: 200%; /* Doble ancho para deslizar izquierda/derecha */
+        height: 100%;
+        left: -100%; /* Empezamos desplazados */
+        transform: translateX(0);
+        transition: transform 0.6s ease-in-out;
+    }
+
+    /* Al activar registro, deslizamos el fondo naranja */
+    .container.right-panel-active .overlay {
+        transform: translateX(50%);
+    }
+
+    /* Textos dentro del panel naranja */
+    .overlay-panel {
+        width: 50%; /* Cada panel ocupa la mitad del ancho del overlay (que es 200%) */
+        height: 100%;
+        padding: 0 15px;
+        flex-direction: column;
+        justify-content: center;
+        top: 0;
+        /* Reseteamos posiciones absolutas raras */
+        right: auto; 
+        transform: translateX(0);
+    }
+
+    /* Ajustes específicos de posición de los textos */
+    .overlay-left {
+        transform: translateX(0); 
+    }
+    .overlay-right {
+        right: 0;
+        transform: translateX(0);
     }
     
-    .container.right-panel-active .overlay-right {
-        transform: translateY(20%);
+    /* Forzar que los textos y botones se vean bien */
+    .overlay-panel h1 {
+        font-size: 1.2rem;
+    }
+    .overlay-panel p {
+        font-size: 0.85rem;
+        margin: 10px 0 15px;
     }
 }
