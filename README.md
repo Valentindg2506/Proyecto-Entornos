@@ -1,7 +1,3 @@
-Entendido. Aquí tienes el README.md adaptado a la naturaleza real de tu proyecto, destacando tanto la funcionalidad principal (el tracker de series/películas) como el módulo de seguridad que acabamos de implementar.
-
-Copia y pega esto en tu archivo:
-
 🎬 AdminViews - Tracker de Series y Películas
 AdminViews es una aplicación web diseñada para llevar un control personal del contenido audiovisual que consumes. Permite a los usuarios registrarse y organizar series y películas en listas personalizadas según su estado (viendo, vistas, pendientes).
 
