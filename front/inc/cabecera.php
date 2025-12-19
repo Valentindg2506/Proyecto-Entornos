@@ -7,7 +7,7 @@
     </head>
     <body>
         <header>
-            <h1>AdminViews</h1>
+            <img src="../img/adminviews.png">
         </header>
         <main>
             
