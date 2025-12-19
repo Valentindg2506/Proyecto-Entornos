@@ -4,7 +4,7 @@ session_start();
 // Verificamos si la variable de sesión existe
 // Si NO existe (!isset), redirigimos al login
 if (!isset($_SESSION['usuario'])) {
-    header("Location: index.php");
+    header("Location: intruso.php");
     exit;
 }
 ?>
