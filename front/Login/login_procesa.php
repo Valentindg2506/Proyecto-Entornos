@@ -1,9 +1,9 @@
 <?php
 	session_start();  // Arranco una sesion
 	$host = "localhost";
-	$user = "CRM";
-	$pass = "Crm2526$";
-	$db   = "CRM";
+	$user = "AdminViews";
+	$pass = "AdminViews123$";
+	$db   = "AdminViews";
 
 	$conexion = new mysqli($host, $user, $pass, $db);
 

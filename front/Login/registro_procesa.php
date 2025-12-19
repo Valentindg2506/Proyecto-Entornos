@@ -7,9 +7,9 @@
 	// Y luego metemos esa información en la base de datos
 
 	$host = "localhost";
-	$user = "CRM";
-	$pass = "Crm2526$";
-	$db   = "CRM";
+	$user = "AdminViews";
+	$pass = "AdminViews123$";
+	$db   = "AdminViews";
 
 	$conexion = new mysqli($host, $user, $pass, $db);
 
