@@ -7,6 +7,7 @@
     </head>
     <body>
         <header>
+        	<a href="https://elorange12.github.io/Pagina-web" class="btn-inicio"><img src="../img/iconovuelta.png" alt="Volver al Inicio"></a>
             <img src="../img/adminviews.png">
         </header>
         <main>
