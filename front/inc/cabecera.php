@@ -8,10 +8,6 @@
     <body>
         <header>
         	<img src="../img/adminviews.png" class="logo-admin" alt="Logo AdminViews">
-        	<!--
-	        	Cada página tendra la vuelta distinta:
-	        	
-	        	<a href="página anterior" class="btn-inicio"><img src="../img/iconovuelta.png" alt="Volver al Inicio"></a> 
-        	 -->
+	        <a href="../Login/exito" class="btn-inicio"><img src="../img/iconovuelta.png" alt="Volver al Inicio"></a> 
         </header>
         <main>

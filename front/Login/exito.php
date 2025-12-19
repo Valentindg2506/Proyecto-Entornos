@@ -8,16 +8,22 @@ if (!isset($_SESSION['usuario'])) {
     exit;
 }
 ?>
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <title>Área Privada</title>
-</head>
-<body>
-    <h1>Bienvenido, <?php echo htmlspecialchars($_SESSION['usuario']); ?></h1>
-    <p>Has entrado con éxito al área segura.</p>
 
-    <a href="logout.php">Cerrar Sesión</a>
-</body>
+<!doctype html>
+<html lang="es">
+    <head>
+        <title>AdminViews</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="../css/estilo.css">
+    </head>
+    <body>
+        <header>
+        	<img src="../img/adminviews.png" class="logo-admin" alt="Logo AdminViews">
+	        <a href="../Login/exito" class="btn-inicio"><img src="../img/iconologout.png" alt="Volver al Inicio"></a> 
+        </header>
+        <main>
+        </main>
+        <footer>
+        </footer>
+	</body>
 </html>
