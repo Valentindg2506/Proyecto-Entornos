@@ -12,4 +12,10 @@
 <?php include "../inc/cabecera.php" ?>
 
 
+			
 <?php include "../inc/piedepagina.php" ?>
+
+
+
+
+

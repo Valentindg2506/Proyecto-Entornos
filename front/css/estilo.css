@@ -244,3 +244,238 @@ footer p {
     font-size: 0.9rem;
     letter-spacing: 0.5px;
 }
+
+/* //////////////////////////////////////////////////////////////////// SERIES / PELICULAS //////////////////////////////////////////////////////////////////// */
+
+/* --- ESTRUCTURA PRINCIPAL (TABLERO) --- */
+.tablero-visual {
+    display: flex;
+    justify-content: center;
+    gap: 40px; /* Separación amplia entre columnas */
+    padding: 40px 20px;
+    align-items: flex-start; /* Alinea al top */
+    flex-wrap: wrap;
+}
+
+.columna-separada {
+    width: 320px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Espacio entre el título naranja y la caja blanca */
+}
+
+/* El título estilo "Botón" o "Píldora" */
+.titulo-pill {
+    background: linear-gradient(to right, #ff4e00, #ff7f50);
+    color: white;
+    text-align: center;
+    padding: 12px;
+    border-radius: 10px; /* Bordes redondeados */
+    border: 1px solid #000; /* Borde negro fino como en el diseño */
+    font-weight: bold;
+    font-size: 1.2rem;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.15);
+}
+
+/* La caja blanca grande donde caen las series */
+.caja-lista {
+    background-color: white;
+    border: 1px solid #000; /* Borde negro */
+    border-radius: 10px;
+    min-height: 500px; /* Altura fija alta */
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+}
+
+/* --- TARJETA DE SERIE INDIVIDUAL --- */
+.tarjeta-serie {
+    display: flex;
+    background: white;
+    border: 1px solid #000; /* Borde negro en cada tarjeta */
+    border-radius: 10px; /* Bordes redondeados */
+    padding: 10px;
+    align-items: center;
+    gap: 10px;
+    position: relative;
+}
+
+.img-serie {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.info-serie {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.info-serie h4 {
+    margin: 0;
+    font-size: 1rem;
+    color: #000;
+}
+
+.info-serie p {
+    margin: 3px 0 0 0;
+    font-size: 0.8rem;
+    color: #666;
+}
+
+/* Acciones (Iconos a la derecha) */
+.acciones-serie {
+    display: flex;
+    flex-direction: column; /* Iconos uno encima de otro o en fila segun prefieras */
+    align-items: flex-end;
+    gap: 5px;
+    min-width: 60px;
+}
+
+.btns-left, .btns-right {
+    display: flex;
+    gap: 8px;
+}
+
+.btn-icon {
+    cursor: pointer;
+    font-size: 1.1rem;
+    transition: transform 0.2s;
+}
+.btn-icon:hover { transform: scale(1.2); }
+.check { color: #2ecc71; }
+.borrar { color: #e74c3c; }
+
+
+/* --- BOTÓN AGREGAR (HEADER) --- */
+.btn-agregar-diseno {
+    background: linear-gradient(to right, #ff4e00, #ff7f50);
+    color: white;
+    border: none;
+    border-radius: 20px; /* Muy redondeado */
+    padding: 10px 25px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+.plus-icon {
+    border: 2px solid white;
+    border-radius: 50%;
+    width: 18px;
+    height: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    line-height: 0;
+    padding-bottom: 2px; /* Ajuste visual */
+}
+
+
+/* --- MODAL (Diseño exacto foto 2) --- */
+.modal-overlay {
+    display: none;
+    position: fixed;
+    z-index: 2000;
+    left: 0; top: 0;
+    width: 100%; height: 100%;
+    background-color: rgba(255,255,255,0.8); /* Fondo blanco semitransparente como en diseño moderno? O oscuro? */
+    /* Si prefieres oscuro como suele ser: */
+    background-color: rgba(0,0,0,0.5); 
+    
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-card-diseno {
+    /* Fondo Naranja Degradado */
+    background: linear-gradient(to bottom, #ff4e00, #ff8c00);
+    width: 350px;
+    padding: 30px;
+    border-radius: 15px;
+    border: 1px solid #000;
+    text-align: center;
+    color: white;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+}
+
+.modal-card-diseno h2 {
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-size: 1.4rem;
+}
+
+.form-diseno {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* Los inputs blancos con borde negro */
+.input-diseno {
+    width: 100%;
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #000; /* Borde negro visible */
+    background-color: white;
+    font-size: 0.95rem;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+.textarea-diseno {
+    resize: none;
+    height: 100px;
+}
+
+/* Select personalizado */
+.select-wrapper-diseno {
+    position: relative;
+}
+.select-diseno {
+    appearance: none;
+    -webkit-appearance: none;
+    color: #333;
+}
+.flecha-abajo {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #888;
+    pointer-events: none;
+}
+
+/* Botón agregar dentro del modal */
+.btn-agregar-modal {
+    margin-top: 10px;
+    background: transparent;
+    border: 2px solid white;
+    color: white;
+    padding: 10px 30px;
+    border-radius: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+.btn-agregar-modal:hover {
+    background: rgba(255,255,255,0.2);
+}
+.btn-cancelar {
+    background: transparent;
+    border: none;
+    color: white;
+    cursor: pointer;
+    text-decoration: underline;
+    margin-right: 10px;
+}
