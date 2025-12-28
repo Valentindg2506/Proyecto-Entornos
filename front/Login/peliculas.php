@@ -109,6 +109,9 @@
 		}
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> a1898d6fdc45bbe873a121e11ce8032de2db5f02
 		/* --- ENCABEZADOS DE COLUMNA (Ahora ambos naranjas) --- */
 		.columna-header {
 			padding: 15px; 
@@ -516,6 +519,8 @@
 </body>
 <?php include "../inc/piedepagina.php" ?>
 
+<<<<<<< HEAD
+=======
 =======
 			
 <?php include "../inc/piedepagina.php" ?>
@@ -526,3 +531,4 @@
 
 >>>>>>> 2a0169bdfde23a4d41ee7acd0cd5c4abd4be161d
 
+>>>>>>> a1898d6fdc45bbe873a121e11ce8032de2db5f02

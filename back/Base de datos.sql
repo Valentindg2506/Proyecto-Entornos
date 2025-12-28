@@ -24,6 +24,8 @@ CREATE TABLE contenido (
 	nivel_prioridad ENUM('Alta', 'Media', 'Baja') NOT NULL DEFAULT 'Media',
 	CONSTRAINT fk_contenido_1 FOREIGN KEY (usuario_id) REFERENCES usuario(id)
 );
+ALTER TABLE contenido 
+ADD COLUMN imagen_url VARCHAR(255) NULL;
 
 
 -- usuario
