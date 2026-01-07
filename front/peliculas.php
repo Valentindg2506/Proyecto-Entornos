@@ -95,7 +95,7 @@
 			grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
 			gap: 30px; 
 			padding: 20px; 
-			max-width: 1400px; 
+			max-width: 1600px; 
 			margin: 0 auto;
 		}
 
@@ -121,9 +121,16 @@
 			border-top: none;
 			border-radius: 0 0 10px 10px; 
 			padding: 20px; 
-			min-height: 500px; /* Altura mínima para que se vea bien */
+			min-height: 450px; /* Altura mínima para que se vea bien */
 			box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+			
+						
+			/* SCROLL: */
+			height: 50vh;       /* Ocupa el 70% del alto de la pantalla */
+			overflow-y: auto;   /* Activa el scroll vertical si hay muchas series */
+			
 		}
+
 
 		/* --- TARJETA DE PELÍCULA --- */
 		.card-peli {
@@ -131,8 +138,8 @@
 			align-items: center;
 			background: #fff; 
 			border-radius: 12px; 
-			padding: 15px;
-			margin-bottom: 20px; 
+			padding: 10px;
+			margin-bottom: 15px; 
 			box-shadow: 0 4px 15px rgba(0,0,0,0.05);
 			border: 1px solid #f0f0f0;
 			border-left: 5px solid var(--primary); /* Borde lateral naranja */

@@ -133,21 +133,6 @@
 			
 			box-shadow: 0 10px 30px rgba(0,0,0,0.05);
 		}
-		/* Opcional: Estilizar la barra de scroll para que se vea más fina */
-			.columna-body::-webkit-scrollbar {
-				width: 8px;
-			}
-			.columna-body::-webkit-scrollbar-track {
-				background: #f1f1f1;
-				border-radius: 0 0 10px 0;
-			}
-			.columna-body::-webkit-scrollbar-thumb {
-				background: #ccc; 
-				border-radius: 4px;
-			}
-			.columna-body::-webkit-scrollbar-thumb:hover {
-				background: var(--primary); /* Se pone naranja al pasar el mouse */
-			}
 
 		.card-peli {
 			display: flex; align-items: center; background: #fff; border-radius: 12px; 
