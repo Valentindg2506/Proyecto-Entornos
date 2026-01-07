@@ -72,7 +72,7 @@
 		</div>
 
 		<div class="form-container sign-in-container">
-			<form action="login_procesa.php" method="POST">
+			<form action="controladores/login_procesa.php" method="POST">
 				<h1>Iniciar Sesión</h1>
 				
 				<div class="input-group">

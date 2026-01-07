@@ -1,4 +1,4 @@
-<?php include "../inc/cabecera.php" ?>
+<?php include "inc/cabecera.php" ?>
 <?php
 	/**
 	 * -------------------------------------------------------------------------
@@ -517,13 +517,13 @@
 		}
 	</script>
 </body>
-<?php include "../inc/piedepagina.php" ?>
+<?php include "inc/piedepagina.php" ?>
 
 <<<<<<< HEAD
 =======
 =======
 			
-<?php include "../inc/piedepagina.php" ?>
+<?php include "inc/piedepagina.php" ?>
 
 
 
