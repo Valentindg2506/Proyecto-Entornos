@@ -38,6 +38,12 @@ if (!preg_match('/^(?=.*[A-Z])(?=.*[\W_]).{8,16}$/', $contrasena)) {
     $errores['pass'] = "La contraseña debe tener 8-16 carácteres, 1 Mayúscula y 1 Símbolo";
 }
 
+// --- 4. VALIDAR QUE EL USUARIO CUMPLA CON LOS REQUISITOS ---
+// Regla: 5-20 chars, al menos 1 Mayúscula y 1 número.
+if (!preg_match('/^(?=.*[A-Z])(?=.*[0-9])[a-zA-Z0-9_]{5,20}$/', $usuario)) {
+    $errores['usuario'] = "El usuario requiere 5-20 caracteres, al menos 1 mayúscula y 1 número.";
+}
+
 // --- SI HAY ERRORES ---
 // Guardamos los errores y los datos previos en la sesión para mostrarlos de vuelta en index.php
 if (!empty($errores)) {
