@@ -41,19 +41,6 @@ Archivos relacionados con la estructura de datos.
 
 ---
 
-## 🚀 Guía de Instalación
-
-1.  **Requisitos**: Tener instalado un servidor local como **XAMPP** o **WAMP**.
-2.  **Base de Datos**:
-    *   Abre `phpMyAdmin`.
-    *   Crea una base de datos llamada `AdminViews` (o importa el archivo `back/BD.sql`).
-    *   Asegúrate de que el usuario configurado en `front/inc/db.php` tenga permisos.
-3.  **Despliegue**:
-    *   Copia la carpeta `Proyecto-Entornos` a tu carpeta `htdocs` (en XAMPP) o `www` (en WAMP).
-    *   Accede desde el navegador a: `http://localhost/Proyecto-Entornos/front/`
-
----
-
 ## 🧠 Lógica de la Aplicación
 
 ### 1. Autenticación (Login/Registro)
