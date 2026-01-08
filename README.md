@@ -27,17 +27,13 @@ Archivos relacionados con la estructura de datos.
 ---
 
 # Vista previa
-## **Login**
+```
 ![Login](screenshots/login.png)
-## **Registro**
 ![Registro](screenshots/registro.png)
-## **Inicio**
 ![Inicio](screenshots/inicio.png)
-## **Peliculas**
 ![Peliculas](screenshots/peliculas.png)
-## **Series**
 ![Series](screenshots/series.png)
-
+```
 ---
 
 ## 🚀 Guía de Instalación
