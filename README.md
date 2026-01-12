@@ -58,8 +58,7 @@ Para facilitar el llenado de datos, la app se conecta a la API de **TheMovieDB (
 
 ---
 
-[![Ver Informe](https://img.shields.io/badge/Ver_Informe-2ea44f?style=for-the-badge&logo=readthedocs&logoColor=white)](./informe.md)
-[![Informe](https://img.shields.io/badge/Documento-Leer_Informe-blueviolet?style=for-the-badge)](./informe.md)
+[![Informe](https://img.shields.io/badge/Informe.md-Leer_Informe-blueviolet?style=for-the-badge)](./informe.md)
 
 ---
 
