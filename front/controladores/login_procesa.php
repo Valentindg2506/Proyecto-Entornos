@@ -4,6 +4,8 @@
  * CONTROLADOR: PROCESAR LOGIN
  * -----------------------------------------------------------------------------
  * Recibe los datos del formulario de inicio de sesión y verifica credenciales.
+ * En el caso de que el usuario sea admin lo lleva al admin panel.
+ * En el caso contrario lo lleva por la ruta normal.
  */
 
 session_start();
@@ -30,12 +32,19 @@ if (isset($_POST['usuario']) && isset($_POST['contrasena'])) {
 
         // 3. Comparamos la pass escrita (texto plano) con el hash (encriptado)
         if (password_verify($pass_ingresada, $hash_guardado)) {
+        
             // LOGIN ÉXITOSO: Guardamos datos en sesión para recordarlo
             $_SESSION['usuario'] = $fila['usuario'];
             $_SESSION['id_usuario'] = $fila['id'];
             
-            header("Location: ../exito.php"); // Ir al Dashboard
-            exit; 
+			## LOGICA DE REDIRECCION MANUAL ##
+            if ($fila['usuario'] === 'Admin1') {  // SI EL USUARIO ES ADMIN
+                header("Location: ../../admin/index.php"); // LO LLEVA A AL PANEL DE ADMIN
+            } else {
+                header("Location: ../exito.php"); // Ruta normal
+            }
+            
+            exit;
         } else {
             // Contraseña mal
             header("Location: ../index.php?error=1");
