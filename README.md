@@ -6,7 +6,7 @@
 
 ## 🔎 URL del proyecto: https://adminviews.valentindg.com/ <br>
 
-[![Informe](https://img.shields.io/badge/Informe.md-Leer_Informe-RoyalBlue?style=for-the-badge)](./informe.md)
+[![Informe](https://img.shields.io/badge/Informe.md-Leer_Informe-0969da?style=for-the-badge)](./informe.md)
 
 ---
 ## 📂 Estructura del Proyecto
