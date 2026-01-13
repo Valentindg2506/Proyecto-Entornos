@@ -1,41 +1,51 @@
+## CREAMOS LA BASE DE DATOS ##
 CREATE DATABASE AdminViews;
 USE AdminViews;
 
--- Tablas
+## CREAMOS LAS TABLAS ##
+
 CREATE TABLE usuario (
-	id INT AUTO_INCREMENT PRIMARY KEY,
+	id INT AUTO_INCREMENT PRIMARY KEY,  ## IDENTIFICADOR UNICO QUE SE AUTOINCREMENTA ##
 	nombre VARCHAR(255),
 	usuario VARCHAR(255),
 	correo VARCHAR(255),
-	contrasena VARCHAR(255)
+	contrasena VARCHAR(255) ## LA CONTRASEÑA SE GUARDA HASHEADA (proceso que lo hace el registro de la app) ##
 );
+## ALTERAMOS LA TABLA PARA QUE TENGA TOKEN ##
 
-ALTER TABLE usuario ADD token VARCHAR(255) NULL;
+ALTER TABLE usuario ADD token VARCHAR(255) NULL; ## ES NECESARIO PARA LA VALIDACIÓN DE UN CAMBIO DE CONTRASEÑA ##
 
 CREATE TABLE contenido (
-	id INT AUTO_INCREMENT PRIMARY KEY,
-	usuario_id INT,
+	id INT AUTO_INCREMENT PRIMARY KEY, ## IDENTIFICADOR UNICO QUE SE AUTOINCREMENTA ##
+	usuario_id INT,  ## FK --> VINCULA EL CONTENIDO CON EL USUARIO ##
 	titulo VARCHAR(255),
-	tipo ENUM('pelicula', 'serie'),
-	estado ENUM('Por_ver', 'Viendo', 'Vistas') NOT NULL DEFAULT 'Por_ver',
+	tipo ENUM('pelicula', 'serie'), ## SOLO PERMITE ESOS DOS VALORES ##
+	## ENUM --> Es una lista cerrada de opciones, se obliga a que el dato sea uno de los definidos ##
+	estado ENUM('Por_ver', 'Viendo', 'Vistas') NOT NULL DEFAULT 'Por_ver',  ## SE INDICA QUE por_ver SEA EL ESTADO POR DEFECTO ##
 	puntuacion VARCHAR(255),
 	comentario VARCHAR(255),
 	fecha_visualizacion VARCHAR(255),
-	nivel_prioridad ENUM('Alta', 'Media', 'Baja') NOT NULL DEFAULT 'Media',
+	nivel_prioridad ENUM('Alta', 'Media', 'Baja') NOT NULL DEFAULT 'Media', ## SE INDICA QUE media SEA EL VALOR POR DEFECTO ##
+	
+	## EVITA QUE SE CREE CONTENIDO PARA UN USUARIO INEXISTENTE ##
 	CONSTRAINT fk_contenido_1 FOREIGN KEY (usuario_id) REFERENCES usuario(id)
 );
+
+## ALTERAMOS LA TABLA PARA AGREGAR LA URL DE LAS IMAGENES ##
 ALTER TABLE contenido 
-ADD COLUMN imagen_url VARCHAR(255) NULL;
+ADD COLUMN imagen_url VARCHAR(255) NULL; ## LE PERMITE A LA API GUARDAR LA IMAGEN DE CADA PELICULA Y / O SERIE ##
 
 
--- usuario
+## CREAMOS EL USUARIO Y LE DAMOS PERMISOS ##
 
 CREATE USER 
 'AdminViews'@'localhost' 
 IDENTIFIED  BY 'AdminViews123$';
 
+## LE DAMOS ACCESO AL USUARIO ##
 GRANT USAGE ON *.* TO 'AdminViews'@'localhost';
 
+## LE SACAMOS LAS RESTRICCIONES ##
 ALTER USER 'AdminViews'@'localhost' 
 REQUIRE NONE 
 WITH MAX_QUERIES_PER_HOUR 0 
@@ -43,7 +53,9 @@ MAX_CONNECTIONS_PER_HOUR 0
 MAX_UPDATES_PER_HOUR 0 
 MAX_USER_CONNECTIONS 0;
 
+## LE DAMOS ACCESO A LA BD ##
 GRANT ALL PRIVILEGES ON AdminViews.* 
 TO 'AdminViews'@'localhost';
 
+## RECARGAMOS PRIVILEGIOS ##
 FLUSH PRIVILEGES;
