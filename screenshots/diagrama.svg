@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="765.2187571806063" height="446.96875179515155" viewBox="0 0 765.2187571806063 446.96875179515155">
+
+  <defs>
+    <style>
+      text { font-family: system-ui, -apple-system, "Segoe UI", sans-serif; font-size: 12px; fill: #111827; }
+      .shape-rect { fill: #ffffff; stroke: #9ca3af; stroke-width: 1; }
+      .shape-entity { fill: #ffffff; stroke: #111827; stroke-width: 2; }
+      .shape-circle { fill: #ffffff; stroke: #9ca3af; stroke-width: 1; }
+      .shape-pill { fill: #ffffff; stroke: #9ca3af; stroke-width: 1; }
+      .shape-db { fill: #ffffff; stroke: #9ca3af; stroke-width: 1; }
+      .conn { stroke: #111827; stroke-width: 2; fill: none; }
+    </style>
+    <marker id="arrow-end" markerWidth="10" markerHeight="7" refX="10" refY="3.5"
+            orient="auto" markerUnits="strokeWidth">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#111827"/>
+    </marker>
+    <marker id="arrow-start" markerWidth="10" markerHeight="7" refX="0" refY="3.5"
+            orient="auto" markerUnits="strokeWidth">
+      <polygon points="10 0, 0 3.5, 10 7" fill="#111827"/>
+    </marker>
+  </defs>
+        
+<rect class="shape-rect" x="315.48436781939336" y="40.95312679515165" width="119.99999999999996" height="39.999991024241716" rx="4" ry="4" />
+<text x="375.48436781939336" y="64.95312230727251" text-anchor="middle">Login</text>
+<rect class="shape-rect" x="138.25001436121323" y="40" width="119.99999999999996" height="39.999999999999986" rx="4" ry="4" />
+<text x="198.2500143612132" y="63.99999999999999" text-anchor="middle">Registro</text>
+<rect class="shape-rect" x="316.5156465418198" y="147.6718767951516" width="119.99999999999996" height="39.999999999999986" rx="4" ry="4" />
+<text x="376.5156465418198" y="171.6718767951516" text-anchor="middle">Inicio</text>
+<rect class="shape-rect" x="402.343785903033" y="260.5625017951516" width="119.99999999999996" height="39.999999999999986" rx="4" ry="4" />
+<text x="462.343785903033" y="284.5625017951516" text-anchor="middle">Series</text>
+<rect class="shape-rect" x="232.39063936121318" y="260.6250089757582" width="119.99996409696686" height="39.999999999999986" rx="4" ry="4" />
+<text x="292.3906214096966" y="284.6250089757582" text-anchor="middle">Películas</text>
+<rect class="shape-rect" x="40" y="291.03125179515155" width="136.18749281939333" height="39.999999999999986" rx="4" ry="4" />
+<text x="108.09374640969666" y="315.03125179515155" text-anchor="middle">Formulario Películas</text>
+<rect class="shape-rect" x="308.8593965418198" y="366.96875179515155" width="141.31247127757348" height="39.999999999999986" rx="4" ry="4" />
+<text x="379.51563218060653" y="390.96875179515155" text-anchor="middle">Formulario rellenado</text>
+<rect class="shape-rect" x="603.8750502642462" y="291.0624874339383" width="121.34370691636025" height="39.999999999999986" rx="4" ry="4" />
+<text x="664.5469037224264" y="315.0624874339383" text-anchor="middle">Formulario Series</text>
+<text x="342.64063218060653" y="329.49999461454496">Película/Serie</text>
+<text x="360.078160903033" y="317.2656052533317">Añade</text>
+<text x="386.89061781939324" y="117.17186243393839">Inicia Sesión</text>
+<text x="429.82813218060653" y="226.5937517951516">Se escoje mediante un menú donde quieres ir</text>
+<path class="conn" d="M 258.2500143612132 60.32266508902204 L 315.48436781939324 60.63045721825044" marker-start="url(#arrow-start)" marker-end="url(#arrow-end)" />
+<path class="conn" d="M 375.67763815804415 80.95311781939334 L 376.3223761598001 147.6718767951516" marker-start="url(#arrow-start)" marker-end="url(#arrow-end)" />
+<path class="conn" d="M 391.7211854182699 187.6718767951516 L 447.1382470265828 260.5625017951516" marker-start="url(#arrow-start)" marker-end="url(#arrow-end)" />
+<path class="conn" d="M 361.6200834869394 187.6718767951516 L 307.286184464577 260.6250089757582" marker-start="url(#arrow-start)" marker-end="url(#arrow-end)" />
+<path class="conn" d="M 352.39060345818007 280.6029415448546 L 402.343785903033 280.58456923265754" marker-start="url(#arrow-start)" marker-end="url(#arrow-end)" />
+<path class="conn" d="M 232.3906393612133 290.5241134685795 L 176.18749281939336 299.7967965836053" marker-end="url(#arrow-end)" />
+<path class="conn" d="M 176.18749281939336 330.0822905619765 L 308.8593965418198 367.20078843220807" marker-end="url(#arrow-end)" />
+<path class="conn" d="M 363.13008687985916 366.96875179515155 L 308.77616671044404 300.6250089757582" marker-end="url(#arrow-end)" />
+<path class="conn" d="M 395.0839195175678 366.96875179515155 L 446.77549856607175 300.5625017951516" marker-end="url(#arrow-end)" />
+<path class="conn" d="M 522.343785903033 289.61280308655773 L 603.8750502642462 301.91084487219547" marker-end="url(#arrow-end)" />
+<path class="conn" d="M 603.8750502642462 327.2199206972065 L 450.17186781939324 368.1523922000991" marker-end="url(#arrow-end)" />
+</svg>
