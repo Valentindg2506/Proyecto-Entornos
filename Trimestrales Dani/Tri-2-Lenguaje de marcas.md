@@ -14,7 +14,7 @@ Estás vistas están diseñadas con una base en `HTML`, es decir, todo el lengua
 
 ```
 	<!doctype html>
-	**<html lang="es">**
+	<html lang="es">
 		<head>
 			<title>AdminViews</title>
 			<meta charset="utf-8">
@@ -59,15 +59,153 @@ Estás vistas están diseñadas con una base en `HTML`, es decir, todo el lengua
 
 Empecemos con el `<head>`, aquí se añaden sobre todo el titulo utilizando una etiqueta `<title>` conexiones con `<php>` a otros archivos para añadir el `CSS` o alguna plantilla de cabecera o pie de página, es decir en el `<head>` al ser el inicio de la página es donde se exportan y detallan las cosas que se van a utilizar en la página utilizando etiquetas como `<meta>` o `<link>`.
 
+```
+	<!doctype html>
+	<html lang="es">
+		<head>
+		    <title>AdminViews</title>
+		    <meta charset="utf-8">
+		    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+		    <link rel="icon" type="image/png" href="img/adminviews_favicon.png">
+		    <link rel="stylesheet" href="css/estilo.css">
+		</head>
+```
+
 Continuando con el `<body>`, en esta etiqueta puede a ver variedad de cosas y también se divide en 3 partes que serían `<header>`, `<main>` y `<footer>`, pero en series y películas la cabecera y el pie de página están estandarizados y utilizan el mismo, ya que lo exportamos utilizando `PHP` de la carpeta `inc/`, sin embargo el inicio de sesión no utiliza ni cabecera ni pie de página y la página principal utiliza una cabecera independiente pero si el pie de página estandarizado.
+
+```
+	<?php include "inc/piedepagina.php" ?>
+```
+
+_cabecera.php_
+```
+	<body>
+        <header>
+        	<img src="img/adminviews.png" class="logo-admin" alt="Logo AdminViews">
+        	
+        	<nav class="navegacion-header">
+				<a href="exito.php">Inicio</a>
+				<a href="series.php">Series</a>
+				<a href="peliculas.php">Películas</a>
+			</nav>
+        	
+	        <a href="exito.php" class="btn-inicio"><img src="img/iconovuelta.png" alt="Volver al Inicio" title="Inicio"></a> 
+        </header>
+        <main>
+```
+
+_piedepagina.php_
+```
+		</main>
+		<footer>
+			<div class="footer-content">
+				<p>&copy; 2025 | Valentín De Gennaro - Daniel Oliveira Vidal</p>
+			</div>
+		</footer>
+	</body>
+```
+
 
 Vayamos ahora con el `<main>` que es el desenlace de la página aquí es donde ocurre la magia se pueden añadir etiquetas como `<script>` para poner código de `JS`, etiquetas semánticas como `<section>`, `<article>` para así añadir secciones, menús y de más que con ayuda del `CSS` ajustaremos y para que aparezca de una forma ordenada a la vez que estética.
 
-Las vistas toman orden y estética cuando en el `<head>` se exporta el estilo `CSS` de un archivo externo, este lo vinculamos mediante un comando de `PHP`.
+_dentro de main_
+```
+	<section class="cards-container">
+		<article class="card">
+			<div class="card-header">
+				<img src="img/iconoseries.png" alt="Icono Series" class="card-icon">
+				<h3>Lista de Series</h3>
+			</div>
+			<div class="card-body">
+				<p>Accede a todas las series que tienes añadidas a tu lista de series pendientes, viendo o vistas.</p>
+				<a href="series.php" class="btn-flecha">
+				<img src="img/flechaderecha.png" alt="Ir">
+				</a>
+			</div>
+		</article>
+		<article class="card">
+			<div class="card-header">
+				<img src="img/iconopelicula.png" alt="Icono Películas" class="card-icon">
+				<h3>Lista de Películas</h3>
+			</div>
+			<div class="card-body">
+				<p>Accede a todas las películas que tienes añadidas a tu lista de películas pendientes o vistas.</p>
+				<a href="peliculas.php" class="btn-flecha">
+				<img src="img/flechaderecha.png" alt="Ir">
+			</a>
+			</div>
+		</article>
+	</section>
+```
+
+Las vistas toman orden y estética cuando en el `<head>` se exporta el estilo `CSS` de un archivo externo, este lo vinculamos mediante una etiqueta `<link>`.
+
+```
+	<link rel="stylesheet" href="css/estilo.css">
+```
 
 El estilo que tenemos escrito, se divide por secciones y secciones que definen cada parte de la página, en estas se va retocando cada parte y ordenándola y dejándola en el sitio que le corresponde de una manera que todo aquel que entre a la página vea todo bien y perfecto y a la vez de una manera intuitiva.
 
 En este se usan propiedades `flex` en secciones para ordenarlas de manera cuadrática y ordenada, se usan propiedades de colores como `color` para definir el color de algo, `background-color` para definir el color del fondo de un objeto y demás propiedades, además de otras propiedades para alinear objetos que los centran, los transforman, añaden margenes respecto a algo y demás, como pueden ser las propiedades como `margin`, `padding`, `transition`, `width`, `align-items`... Haciendo así un archivo muy completo de estilo que complementa a la página y la deja de una forma clara e intuitiva.
+
+**Ejemplo de CSS**
+
+```
+	.btn-inicio img {
+		width: 100%;
+		height: 100%;
+		object-fit: contain;
+	}
+```
+
+```
+	.navegacion-header {
+		display: flex;
+		gap: 25px; /* Separación entre las palabras */
+		align-items: center;
+	}
+```
+
+```
+	.card-body p {
+		font-size: 1rem;
+		line-height: 1.5;
+		color: #333;
+		margin-bottom: 25px;
+	}
+```
+
+```
+	.img-serie {
+		width: 60px;
+		height: 60px;
+		object-fit: cover;
+		border-radius: 5px;
+		border: 1px solid #ccc;
+	}
+```
+
+También utilizamos una herramienta muy util que es una propiedad del `CSS` que se exporta con un `<meta>` que es el `viewport` que se utiliza para que la página se ajuste a dispositivos moviles:
+
+```
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+```
+
+```
+	@media (max-width: 768px) {
+		header {
+		    flex-direction: column; /* Cambia a vertical */
+		    gap: 15px; /* Espacio entre logo, menú y botón */
+		    padding: 15px;
+		}
+
+		.navegacion-header {
+		    flex-direction: row; /* Mantiene los enlaces en fila */
+		    gap: 15px;
+		    font-size: 0.9rem;
+		}
+	}
+```
 
 Por ultimo en lenguaje de marcas hemos utilizado `JS` para realizar eventos puntuales por los archivos en complementación al `CSS` como puede ser la animación en el inicio de sesión que cambia de inicio de sesión a registro y viceversa o a la hora de pasar una película/seria a la columna `Vistas` la calificación en estrellas que se le atribuye.
 
