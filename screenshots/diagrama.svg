@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="765.2187571806063" height="446.96875179515155" viewBox="0 0 765.2187571806063 446.96875179515155">
+<svg xmlns="http://www.w3.org/2000/svg" width="769.468799937855" height="498.15626664595163" viewBox="0 0 769.468799937855 498.15626664595163">
 
   <defs>
     <style>
@@ -20,35 +20,39 @@
     </marker>
   </defs>
         
-<rect class="shape-rect" x="315.48436781939336" y="40.95312679515165" width="119.99999999999996" height="39.999991024241716" rx="4" ry="4" />
-<text x="375.48436781939336" y="64.95312230727251" text-anchor="middle">Login</text>
-<rect class="shape-rect" x="138.25001436121323" y="40" width="119.99999999999996" height="39.999999999999986" rx="4" ry="4" />
-<text x="198.2500143612132" y="63.99999999999999" text-anchor="middle">Registro</text>
-<rect class="shape-rect" x="316.5156465418198" y="147.6718767951516" width="119.99999999999996" height="39.999999999999986" rx="4" ry="4" />
-<text x="376.5156465418198" y="171.6718767951516" text-anchor="middle">Inicio</text>
-<rect class="shape-rect" x="402.343785903033" y="260.5625017951516" width="119.99999999999996" height="39.999999999999986" rx="4" ry="4" />
-<text x="462.343785903033" y="284.5625017951516" text-anchor="middle">Series</text>
-<rect class="shape-rect" x="232.39063936121318" y="260.6250089757582" width="119.99996409696686" height="39.999999999999986" rx="4" ry="4" />
-<text x="292.3906214096966" y="284.6250089757582" text-anchor="middle">Películas</text>
-<rect class="shape-rect" x="40" y="291.03125179515155" width="136.18749281939333" height="39.999999999999986" rx="4" ry="4" />
-<text x="108.09374640969666" y="315.03125179515155" text-anchor="middle">Formulario Películas</text>
-<rect class="shape-rect" x="308.8593965418198" y="366.96875179515155" width="141.31247127757348" height="39.999999999999986" rx="4" ry="4" />
-<text x="379.51563218060653" y="390.96875179515155" text-anchor="middle">Formulario rellenado</text>
-<rect class="shape-rect" x="603.8750502642462" y="291.0624874339383" width="121.34370691636025" height="39.999999999999986" rx="4" ry="4" />
-<text x="664.5469037224264" y="315.0624874339383" text-anchor="middle">Formulario Series</text>
-<text x="342.64063218060653" y="329.49999461454496">Película/Serie</text>
-<text x="360.078160903033" y="317.2656052533317">Añade</text>
-<text x="386.89061781939324" y="117.17186243393839">Inicia Sesión</text>
-<text x="429.82813218060653" y="226.5937517951516">Se escoje mediante un menú donde quieres ir</text>
-<path class="conn" d="M 258.2500143612132 60.32266508902204 L 315.48436781939324 60.63045721825044" marker-start="url(#arrow-start)" marker-end="url(#arrow-end)" />
-<path class="conn" d="M 375.67763815804415 80.95311781939334 L 376.3223761598001 147.6718767951516" marker-start="url(#arrow-start)" marker-end="url(#arrow-end)" />
-<path class="conn" d="M 391.7211854182699 187.6718767951516 L 447.1382470265828 260.5625017951516" marker-start="url(#arrow-start)" marker-end="url(#arrow-end)" />
-<path class="conn" d="M 361.6200834869394 187.6718767951516 L 307.286184464577 260.6250089757582" marker-start="url(#arrow-start)" marker-end="url(#arrow-end)" />
-<path class="conn" d="M 352.39060345818007 280.6029415448546 L 402.343785903033 280.58456923265754" marker-start="url(#arrow-start)" marker-end="url(#arrow-end)" />
-<path class="conn" d="M 232.3906393612133 290.5241134685795 L 176.18749281939336 299.7967965836053" marker-end="url(#arrow-end)" />
-<path class="conn" d="M 176.18749281939336 330.0822905619765 L 308.8593965418198 367.20078843220807" marker-end="url(#arrow-end)" />
-<path class="conn" d="M 363.13008687985916 366.96875179515155 L 308.77616671044404 300.6250089757582" marker-end="url(#arrow-end)" />
-<path class="conn" d="M 395.0839195175678 366.96875179515155 L 446.77549856607175 300.5625017951516" marker-end="url(#arrow-end)" />
-<path class="conn" d="M 522.343785903033 289.61280308655773 L 603.8750502642462 301.91084487219547" marker-end="url(#arrow-end)" />
-<path class="conn" d="M 603.8750502642462 327.2199206972065 L 450.17186781939324 368.1523922000991" marker-end="url(#arrow-end)" />
+<rect class="shape-rect" x="416.59376664595163" y="61.999997225674704" width="119.99994451349431" height="39.99998612837358" rx="4" ry="4" />
+<text x="476.59373890269876" y="85.9999902898615" text-anchor="middle">Login</text>
+<rect class="shape-rect" x="196.15625554865053" y="60.68749167702414" width="119.99999999999999" height="40.000013871626415" rx="4" ry="4" />
+<text x="256.1562555486505" y="84.68749861283735" text-anchor="middle">Registro</text>
+<rect class="shape-rect" x="290.9218805486505" y="163.62498890269885" width="119.99999999999999" height="40" rx="4" ry="4" />
+<text x="350.9218805486505" y="187.62498890269885" text-anchor="middle">Inicio</text>
+<rect class="shape-rect" x="538.2030417702415" y="163.64060835404828" width="158.57821377840907" height="40.000027743252836" rx="4" ry="4" />
+<text x="617.492148659446" y="187.6406222256747" text-anchor="middle">Panel de Administrador</text>
+<rect class="shape-rect" x="180.0156749378551" y="258.1718860973011" width="119.99994451349431" height="40" rx="4" ry="4" />
+<text x="240.01564719460225" y="282.1718860973011" text-anchor="middle">Películas</text>
+<rect class="shape-rect" x="395.4687222567471" y="262.734375" width="119.99994451349431" height="40" rx="4" ry="4" />
+<text x="455.46869451349426" y="286.734375" text-anchor="middle">Series</text>
+<rect class="shape-rect" x="40" y="355.437538840554" width="139.26560835404828" height="39.99994451349431" rx="4" ry="4" />
+<text x="109.63280417702414" y="379.4375110973011" text-anchor="middle">Formulario Películas</text>
+<rect class="shape-rect" x="517.2655417702415" y="361.7968472567471" width="123.68763316761363" height="40" rx="4" ry="4" />
+<text x="579.1093583540483" y="385.7968472567471" text-anchor="middle">Formulario Series</text>
+<rect class="shape-rect" x="273.64060835404825" y="418.15626664595163" width="150.3125" height="40" rx="4" ry="4" />
+<text x="348.79685835404825" y="442.15626664595163" text-anchor="middle">Formulario  Rellenado</text>
+<text x="331.82814164595163" y="349.437538840554">Añade</text>
+<text x="304.5468694513494" y="364.89064164595163">Películas/Series</text>
+<text x="555.4531305486505" y="130.3437444513494">Bajo usuario de administrador</text>
+<text x="282.73440274325276" y="132.1562666459517">Bajo usuario ordinario</text>
+<text x="294.57810835404825" y="246.7031360973011">Menú de selección</text>
+<text x="177.26565274325284" y="54">En caso de no tener usuario</text>
+<path class="conn" d="M 316.1562555486505 81.04474049122953 L 416.59376664595175 81.6427485766535" marker-start="url(#arrow-start)" marker-end="url(#arrow-end)" />
+<path class="conn" d="M 504.3185489931109 101.99998335404828 L 589.7673097249084 163.64060835404828" marker-end="url(#arrow-end)" />
+<path class="conn" d="M 451.8612780933274 101.99998335404828 L 375.6543499350114 163.62498890269885" marker-end="url(#arrow-end)" />
+<path class="conn" d="M 263.4762231933628 258.1718860973011 L 327.46130454989 203.62498890269885" marker-start="url(#arrow-start)" marker-end="url(#arrow-end)" />
+<path class="conn" d="M 372.019138453609 203.62498890269885 L 434.37143660853576 262.734375" marker-start="url(#arrow-start)" marker-end="url(#arrow-end)" />
+<path class="conn" d="M 213.20600236528495 298.1718860973011 L 136.44241181700366 355.437538840554" marker-end="url(#arrow-end)" />
+<path class="conn" d="M 179.26560835404828 393.69812654962686 L 273.64060835404825 418.44717412398643" marker-end="url(#arrow-end)" />
+<path class="conn" d="M 517.2655417702414 396.9305529630193 L 423.95310835404825 419.7648957326495" marker-end="url(#arrow-end)" />
+<path class="conn" d="M 480.43085445638485 302.734375 L 554.1471984111577 361.7968472567471" marker-end="url(#arrow-end)" />
+<path class="conn" d="M 362.523603670267 418.15626664595163 L 441.7419491972755 302.734375" marker-end="url(#arrow-end)" />
+<path class="conn" d="M 335.1978794054294 418.15626664595163 L 253.61462614322105 298.1718860973011" marker-end="url(#arrow-end)" />
 </svg>
