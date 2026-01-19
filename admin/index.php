@@ -27,8 +27,8 @@ $sqlPelis = "SELECT COUNT(*) as total FROM contenido WHERE tipo = 'pelicula'";
 $resPelis = $conexion->query($sqlPelis);
 $totalPelis = $resPelis->fetch_assoc()['total'];
 
-// Nuevos Hoy (Como no hay fecha_registro, mostramos 0 o simulamos para no romper el diseño, 
-// lo ideal sería añadir un campo 'created_at' a la tabla usuario en el futuro)
+// Nuevos Hoy (Como no hay fecha_registro, mostramos 0 o simulamos para no romper el diseño)
+
 $nuevosHoy = 0; 
 
 
