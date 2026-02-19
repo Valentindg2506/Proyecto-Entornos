@@ -1,0 +1,18 @@
+{
+  "name": "proyecto-entornos/pruebas-cb",
+  "description": "Pruebas de caja blanca para login y validador",
+  "type": "project",
+  "require": {},
+  "autoload": {
+    "files": [
+      "validador.php",
+      "bd.php"
+    ]
+  },
+  "scripts": {
+    "test": [
+      "php test_validador.php",
+      "php test_bd.php"
+    ]
+  }
+}
